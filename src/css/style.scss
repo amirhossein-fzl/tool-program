@@ -1,0 +1,175 @@
+@import "../assets/icons/all.min.css";
+@font-face {
+    font-family: sans;
+    src: url("../assets/fonts/IRANSansWeb.eot") format("eot"), url("../assets/fonts/IRANSansWeb.woff") format("woff"), url("../assets/fonts/IRANSansWeb.ttf") format("ttf"), url("../assets/fonts/IRANSansWeb.woff2") format("woff2");
+}
+@font-face {
+    font-family: sans-l;
+    src: url("../assets/fonts/IRANSansWeb_Light.eot") format("eot"), url("../assets/fonts/IRANSansWeb_Light.woff") format("woff"), url("../assets/fonts/IRANSansWeb_Light.ttf") format("ttf"), url("../assets/fonts/IRANSansWeb_Light.woff2") format("woff2");
+}
+@font-face {
+    font-family: sans-md;
+    src: url("../assets/fonts/IRANSansWeb_Medium.eot") format("eot"), url("../assets/fonts/IRANSansWeb_Medium.woff") format("woff"), url("../assets/fonts/IRANSansWeb_Medium.ttf") format("ttf"), url("../assets/fonts/IRANSansWeb_Medium.woff2") format("woff2");
+}
+@font-face {
+    font-family: sans-fa;
+    src: url("../assets/fonts/IRANSansWeb-fa.eot") format("eot"), url("../assets/fonts/IRANSansWeb-fa.woff") format("woff"), url("../assets/fonts/IRANSansWeb-fa.ttf") format("ttf"), url("../assets/fonts/IRANSansWeb-fa.woff2") format("woff2");
+}
+
+.dark-mode {
+    body {
+        background-color: black;
+        color: #fff;
+    }
+}
+
+body {
+    font-family: sans-fa, sans;
+    background-color: #fff;
+    transition: all 300ms ease-out;
+    direction: rtl;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    background-color: #f7f7f7;
+    padding: 10px 15px;
+    border-radius: 7px;
+    justify-content: space-between;
+    ul {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        li {
+            color: #fff;
+            background-color: red;
+            padding: 4px;
+            margin-right: 20px;
+            cursor: pointer;
+            border-radius: 4px;
+            
+}
+        li:first-child {
+            margin-right: unset;
+        }
+    }
+}
+
+.button-con {
+    cursor: default;
+}
+
+#dayIcon {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    top: -3px;
+    margin: 0 7px;
+    fill: #9caec0;
+}
+
+#nightIcon {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    top: -3px;
+    margin: 0 7px;
+    fill: #9caec0;
+}
+
+#dayIcon,
+#nightIcon {
+    cursor: pointer;
+}
+
+.toggle {
+    display: none;
+}
+
+.toggle,
+.toggle:after,
+.toggle:before,
+.toggle *,
+.toggle *:after,
+.toggle *:before,
+.toggle + .toggle-button {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.toggle::-moz-selection,
+.toggle:after::-moz-selection,
+.toggle:before::-moz-selection,
+.toggle *::-moz-selection,
+.toggle *:after::-moz-selection,
+.toggle *:before::-moz-selection,
+.toggle + .toggle-button::-moz-selection {
+    background: none;
+}
+
+.toggle::selection,
+.toggle:after::selection,
+.toggle:before::selection,
+.toggle *::selection,
+.toggle *:after::selection,
+.toggle *:before::selection,
+.toggle + .toggle-button::selection {
+    background: none;
+}
+
+.toggle + .toggle-button {
+    outline: 0;
+    display: inline-block;
+    width: 45px;
+    height: 25px;
+    position: relative;
+    cursor: pointer;
+    border: 2px solid #333;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.toggle + .toggle-button:after,
+.toggle + .toggle-button:before {
+    position: relative;
+    display: block;
+    content: "";
+    width: 50%;
+    height: 100%;
+}
+
+.toggle + .toggle-button:after {
+    right: 0;
+}
+
+.toggle + .toggle-button:before {
+    display: none;
+}
+
+.toggle:checked + .toggle-button:after {
+    right: 50%;
+}
+
+.toggle + .toggle-button {
+    padding: 2px;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    border: 2px solid rgba(156, 174, 192, 0.27);
+    border-radius: 2em;
+}
+
+.toggle + .toggle-button:after {
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    background: rgba(156, 174, 192, 0.27);
+    content: "";
+    border-radius: 1em;
+}
+
+.toggle:checked + .toggle-button:after {
+    left: 50%;
+}
