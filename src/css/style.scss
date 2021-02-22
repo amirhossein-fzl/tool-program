@@ -16,7 +16,11 @@
     src: url("../assets/fonts/IRANSansWeb-fa.eot") format("eot"), url("../assets/fonts/IRANSansWeb-fa.woff") format("woff"), url("../assets/fonts/IRANSansWeb-fa.ttf") format("ttf"), url("../assets/fonts/IRANSansWeb-fa.woff2") format("woff2");
 }
 
-$section-bgcolor: #f7f7f7;
+:root {
+    --section-bgcolor: #f7f7f7;
+}
+
+$section-light-bgcolor: var(--section-bgcolor);
 
 * {
     box-sizing: border-box;
@@ -29,9 +33,10 @@ $section-bgcolor: #f7f7f7;
 
 .dark-mode {
     body {
-        background-color: black;
+        background-color: #003049;
         color: #fff;
     }
+    --section-bgcolor: #284b63;
 }
 
 body {
@@ -43,7 +48,7 @@ body {
 nav {
     display: flex;
     align-items: center;
-    background-color: $section-bgcolor;
+    background-color: $section-light-bgcolor;
     padding: 10px 15px;
     border-radius: 7px;
     justify-content: space-between;
@@ -194,6 +199,27 @@ nav {
     width: 25%;
     padding-right: 10px;
     padding-left: 10px;
+    a {
+        color: unset;
+        text-decoration: none;
+    }
+}
+
+.col-9 {
+    padding-right: 10px;
+    padding-left: 10px;
+    width: ((100% / 12) * 9);
+}
+
+.col-3 {
+    padding-right: 10px;
+    padding-left: 10px;
+    width: ((100% / 12) * 3);
+}
+
+.container {
+    margin-right: 50px;
+    margin-left: 50px;
 }
 
 .tools {
@@ -201,15 +227,11 @@ nav {
         text-align: center;
         margin-top: 40px;
     }
-    .container {
-        margin-right: 50px;
-        margin-left: 50px;
-    }
 }
 
 .card-tools {
     width: 100%;
-    background-color: $section-bgcolor;
+    background-color: $section-light-bgcolor;
     border-radius: 8px;
     display: flex;
     justify-content: center;
@@ -236,3 +258,40 @@ nav {
 //         font-size: 14px;
 //     }
 // }
+
+.links-page {
+    margin-top: 80px;
+    .container {
+        margin-right: 30px;
+        margin-left: 30px;
+    }
+}
+
+.side {
+    background-color: $section-light-bgcolor;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-radius: 7px;
+    padding: 10px;
+    li {
+        a {
+            display: block;
+            width: 100%;
+            padding: 10px 5px;
+            cursor: pointer;
+            &:hover, &.router-link-active {
+                background-color: #ff006e;
+                color: #fff;
+                border-radius: 6px;
+            }
+        }
+    }
+}
+
+.content {
+    background-color: $section-light-bgcolor;
+    width: 100%;
+    border-radius: 7px;
+    padding: 10px;
+}

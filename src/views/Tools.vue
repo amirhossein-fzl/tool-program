@@ -4,10 +4,12 @@
             <h1>ابزار ها</h1>
             <div class="row" style="margin-top: 60px">
                 <div class="col-3">
-                    <div class="card-tools" v-ripple>
-                        <i style="color: #fb5607" class="fad fa-link"></i>
-                        <span>مدیریت لینک</span>
-                    </div>
+                    <router-link :to="{name: 'Links'}">
+                        <div class="card-tools" v-ripple>
+                            <i style="color: #fb5607" class="fad fa-link"></i>
+                            <span>مدیریت لینک</span>
+                        </div>
+                    </router-link>
                 </div>
                 <div class="col-3">
                     <div class="card-tools" v-ripple>
