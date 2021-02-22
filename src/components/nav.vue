@@ -1,9 +1,28 @@
 <template>
     <nav>
         <ul>
-            <li style="background-color: #1a92f9"><i class="fad fa-toolbox"></i> ابزار ها</li>
-            <li style="background-color: #ff006e"><i class="fad fa-code"></i> توسعه دهنده</li>
-            <li style="background-color: #fb5607">تماس باما</li>
+            <li>
+                <router-link :to="{ name: 'Tools' }">
+                    <button style="background-color: #1a92f9" v-ripple><i class="fad fa-toolbox"></i> ابزار ها</button>
+                </router-link>
+            </li>
+            <li>
+                <router-link :to="{ name: 'Tools' }">
+                    <button style="background-color: #ff006e" v-ripple><i class="fad fa-code"></i> توسعه دهنده</button>
+                </router-link>
+            </li>
+            <li>
+                <router-link :to="{ name: 'Tools' }">
+                    <button style="background-color: #8338ec" v-ripple><i class="fad fa-cogs"></i> تنظیمات</button>
+                </router-link>
+            </li>
+            <li>
+                <router-link :to="{ name: 'Tools' }">
+                    <button style="background-color: #fb5607" v-ripple>
+                        تماس باما
+                    </button>
+                </router-link>
+            </li>
         </ul>
         <ModeToggle />
     </nav>
@@ -15,6 +34,6 @@
         name: "Nav",
         components: {
             ModeToggle,
-        }
+        },
     };
 </script>
