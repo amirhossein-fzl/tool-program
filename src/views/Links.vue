@@ -4,9 +4,9 @@
             <div class="row">
                 <div class="col-3">
                     <ul class="side">
-                        <li v-ripple><router-link :to="{name: 'Links'}">داشبورد</router-link></li>
-                        <li v-ripple><router-link :to="{name: 'Tools'}">کوتاه کردن لینک</router-link></li>
-                        <li v-ripple><router-link :to="{name: 'Links'}">لینک های کوتاه شده</router-link></li>
+                        <li><router-link v-ripple :to="{name: 'Links'}">داشبورد</router-link></li>
+                        <li><router-link v-ripple :to="{name: 'Tools'}">کوتاه کردن لینک</router-link></li>
+                        <li><router-link v-ripple :to="{name: 'Links'}">لینک های کوتاه شده</router-link></li>
                     </ul>
                 </div>
 

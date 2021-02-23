@@ -1,3 +1,7 @@
-// module.exports  = {
-//     publicPath: './'
+// module.exports = {
+//     pluginOptions: {
+//         electronBuilder: {
+//             preload: './src/preload.js',
+//         }
+//     }
 // };
