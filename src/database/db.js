@@ -3,9 +3,10 @@ const sqlite3 = require('sqlite3').verbose();
 
 const isBuild = process.env.NODE_ENV === 'production';
 const DBPath = path.join(
-    /* global __static */
-    isBuild ? __dirname : __static,
-    './app.db',
+  /* global __static */
+  __static,
+  isBuild ? "../" : "",
+  "./app.db"
 );
 
 class DB {

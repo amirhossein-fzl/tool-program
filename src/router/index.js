@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import Tools from '../views/Tools.vue';
-import Links from '../views/Links.vue';
+import LinksIndex from '../views/links/index.vue';
+import Links from '../views/links/Links.vue';
 
 const routes = [
     {
@@ -10,8 +11,14 @@ const routes = [
     },
     {
         path: '/links',
-        name: 'Links',
-        component: Links
+        component: LinksIndex,
+        children: [
+            {
+                path: 'dashboard',
+                name: 'Links',
+                component: Links,
+            }
+        ]
     },
 ];
 
