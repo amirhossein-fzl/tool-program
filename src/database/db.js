@@ -5,7 +5,7 @@ const isBuild = process.env.NODE_ENV === 'production';
 const DBPath = path.join(
   /* global __static */
   __static,
-  isBuild ? "../" : "",
+  isBuild ? "../" : "../src/database/",
   "./app.db"
 );
 

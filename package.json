@@ -17,7 +17,8 @@
     "vue": "^3.0.0",
     "vue-ripple-directive": "github:pygmyslowloris/vue-ripple-directive#pull/33/head",
     "vue-router": "^4.0.0-0",
-    "vuex": "^4.0.0-0"
+    "vuex": "^4.0.0-0",
+    "sqlite3": "^5.0.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
@@ -36,7 +37,6 @@
     "node-pre-gyp": "^0.17.0",
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
-    "sqlite3": "^5.0.2",
     "vue-cli-plugin-electron-builder": "~2.0.0-rc.6"
   }
 }
