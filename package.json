@@ -14,11 +14,11 @@
   "main": "background.js",
   "dependencies": {
     "core-js": "^3.6.5",
+    "sqlite3": "^5.0.2",
     "vue": "^3.0.0",
     "vue-ripple-directive": "github:pygmyslowloris/vue-ripple-directive#pull/33/head",
     "vue-router": "^4.0.0-0",
-    "vuex": "^4.0.0-0",
-    "sqlite3": "^5.0.2"
+    "vuex": "^4.0.0-0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",

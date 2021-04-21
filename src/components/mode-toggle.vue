@@ -20,23 +20,28 @@
 </template>
 
 <script>
-    import LocalStorageDB from "local-storage-db";
-    const db = new LocalStorageDB('database');
+    // import LocalStorageDB from "local-storage-db";
+    import DB from "../database/db";
+    // const db = new LocalStorageDB('database');
     export default {
         name: "ModeToggle",
         data() {
             return {
-                DarkMode: db.get('theme'),
+                // DarkMode: db.get('theme'),
+                DarkMode: undefined,
+                // DarkMode: true,
             };
         },
         methods: {
             ChangeMode(new_mode) {
                 let element = document.getElementsByTagName("html")[0];
                 if (new_mode == true) {
-                    db.update(true, 'theme');
+                    // db.update(true, 'theme');
+                    DB.updateOption('theme', true);
                     element.classList.add("dark-mode");
                 } else {
-                    db.update(false, 'theme');
+                    // db.update(false, 'theme');
+                    DB.updateOption('theme', false);
                     element.classList.remove("dark-mode");
                 }
             }
@@ -51,5 +56,10 @@
                 this.ChangeMode(new_mode);
             },
         },
+        mounted() {
+            DB.getOption('theme').then((res => {
+                this.DarkMode = res;
+            }).bind(this));
+        }
     };
 </script>
